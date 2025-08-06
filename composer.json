@@ -1,0 +1,41 @@
+{
+    "name": "aumtics/prime-components",
+    "description": "A Laravel package containing reusable UI components for Prime applications",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "components", "ui", "blade", "prime"],
+    "authors": [
+        {
+            "name": "Aumtics Team",
+            "email": "developer@aumtics.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/view": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aumtics\\PrimeComponents\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aumtics\\PrimeComponents\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aumtics\\PrimeComponents\\PrimeComponentsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+} 
