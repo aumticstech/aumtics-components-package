@@ -120,15 +120,6 @@ A complete header component with breadcrumbs and navigation.
 - `<x-aumtics-table>` - Responsive table wrapper
 - `<x-aumtics-alert>` - Alert notifications
 - `<x-aumtics-dashboard-header>` - Page header with breadcrumbs
-- `<x-aumtics-dashboard-settings>` - Settings panel
-- `<x-aumtics-sidebar-menu>` - Navigation sidebar
-- `<x-aumtics-custom-field>` - Dynamic custom fields
-- `<x-aumtics-loader>` - Loading spinner
-- `<x-aumtics-no-data-found>` - Empty state component
-- `<x-aumtics-sub-sidebar>` - Secondary sidebar
-- `<x-aumtics-customer-basket>` - Customer basket widget
-- `<x-aumtics-assigned-organization>` - Organization selector
-- `<x-aumtics-dashboard-footer>` - Footer component
 
 ## Customization
 
