@@ -1,6 +1,6 @@
-# Prime Components Package
+# Aumtics Components Package
 
-A Laravel package containing reusable UI components for Prime applications. This package provides a collection of Blade components that can be easily integrated into any Laravel project.
+A Laravel package containing reusable UI components for Aumtics applications. This package provides a collection of Blade components that can be easily integrated into any Laravel project.
 
 ## Features
 
@@ -24,13 +24,13 @@ A Laravel package containing reusable UI components for Prime applications. This
 You can install this package from your GitHub repository using Composer:
 
 ```bash
-composer require aumtics/prime-components
+composer require aumtics/aumtics-components
 ```
 
 Or if installing directly from GitHub:
 
 ```bash
-composer require aumtics/prime-components:dev-main
+composer require aumtics/aumtics-components:dev-main
 ```
 
 ### Step 2: Add Repository to composer.json (if needed)
@@ -53,13 +53,13 @@ If the package is in a private repository, add this to your `composer.json`:
 To customize the views, publish them to your application:
 
 ```bash
-php artisan vendor:publish --tag=prime-components-views
+php artisan vendor:publish --tag=aumtics-components-views
 ```
 
 To publish the configuration file:
 
 ```bash
-php artisan vendor:publish --tag=prime-components-config
+php artisan vendor:publish --tag=aumtics-components-config
 ```
 
 ## Available Components
@@ -69,7 +69,7 @@ php artisan vendor:publish --tag=prime-components-config
 A responsive table wrapper with card styling.
 
 ```blade
-<x-prime-table card-id="my-table">
+<x-aumtics-table card-id="my-table">
     <table class="table">
         <thead>
             <tr>
@@ -86,7 +86,7 @@ A responsive table wrapper with card styling.
             </tr>
         </tbody>
     </table>
-</x-prime-table>
+</x-aumtics-table>
 ```
 
 ### Alert Component
@@ -94,9 +94,9 @@ A responsive table wrapper with card styling.
 Display alerts with different types and dismissible functionality.
 
 ```blade
-<x-prime-alert message="Success! Data has been saved." type="success" />
-<x-prime-alert message="Warning! Please check your input." type="warning" />
-<x-prime-alert message="Error! Something went wrong." type="danger" />
+<x-aumtics-alert message="Success! Data has been saved." type="success" />
+<x-aumtics-alert message="Warning! Please check your input." type="warning" />
+<x-aumtics-alert message="Error! Something went wrong." type="danger" />
 ```
 
 ### Dashboard Header Component
@@ -104,7 +104,7 @@ Display alerts with different types and dismissible functionality.
 A complete header component with breadcrumbs and navigation.
 
 ```blade
-<x-prime-dashboard-header 
+<x-aumtics-dashboard-header 
     page-title="Dashboard" 
     :breadcrumb-items="[
         ['name' => 'Home', 'url' => '/'],
@@ -112,23 +112,23 @@ A complete header component with breadcrumbs and navigation.
     ]">
     <!-- Header actions slot -->
     <button class="btn btn-primary">Add New</button>
-</x-prime-dashboard-header>
+</x-aumtics-dashboard-header>
 ```
 
 ## Component List
 
-- `<x-prime-table>` - Responsive table wrapper
-- `<x-prime-alert>` - Alert notifications
-- `<x-prime-dashboard-header>` - Page header with breadcrumbs
-- `<x-prime-dashboard-settings>` - Settings panel
-- `<x-prime-sidebar-menu>` - Navigation sidebar
-- `<x-prime-custom-field>` - Dynamic custom fields
-- `<x-prime-loader>` - Loading spinner
-- `<x-prime-no-data-found>` - Empty state component
-- `<x-prime-sub-sidebar>` - Secondary sidebar
-- `<x-prime-customer-basket>` - Customer basket widget
-- `<x-prime-assigned-organization>` - Organization selector
-- `<x-prime-dashboard-footer>` - Footer component
+- `<x-aumtics-table>` - Responsive table wrapper
+- `<x-aumtics-alert>` - Alert notifications
+- `<x-aumtics-dashboard-header>` - Page header with breadcrumbs
+- `<x-aumtics-dashboard-settings>` - Settings panel
+- `<x-aumtics-sidebar-menu>` - Navigation sidebar
+- `<x-aumtics-custom-field>` - Dynamic custom fields
+- `<x-aumtics-loader>` - Loading spinner
+- `<x-aumtics-no-data-found>` - Empty state component
+- `<x-aumtics-sub-sidebar>` - Secondary sidebar
+- `<x-aumtics-customer-basket>` - Customer basket widget
+- `<x-aumtics-assigned-organization>` - Organization selector
+- `<x-aumtics-dashboard-footer>` - Footer component
 
 ## Customization
 
@@ -136,7 +136,7 @@ A complete header component with breadcrumbs and navigation.
 
 After publishing the views, you can customize them in:
 ```
-resources/views/vendor/prime-components/components/
+resources/views/vendor/aumtics-components/components/
 ```
 
 ### Configuration
@@ -181,7 +181,7 @@ composer test
 ### Basic Table with Data
 
 ```blade
-<x-prime-table card-id="users-table">
+<x-aumtics-table card-id="users-table">
     <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
             <tr>
@@ -200,28 +200,28 @@ composer test
             @endforeach
         </tbody>
     </table>
-</x-prime-table>
+</x-aumtics-table>
 ```
 
 ### Complete Page Layout
 
 ```blade
-<x-prime-dashboard-header 
+<x-aumtics-dashboard-header 
     page-title="User Management" 
     :breadcrumb-items="[
         ['name' => 'Home', 'url' => route('home')],
         ['name' => 'Users', 'active' => true]
     ]">
     <button class="btn btn-primary">Add User</button>
-</x-prime-dashboard-header>
+</x-aumtics-dashboard-header>
 
 @if(session('success'))
-    <x-prime-alert message="{{ session('success') }}" type="success" />
+    <x-aumtics-alert message="{{ session('success') }}" type="success" />
 @endif
 
-<x-prime-table card-id="users-table">
+<x-aumtics-table card-id="users-table">
     <!-- Your table content -->
-</x-prime-table>
+</x-aumtics-table>
 ```
 
 ## License

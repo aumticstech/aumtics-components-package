@@ -30,7 +30,7 @@ Since this is a private package, you need to add the repository to your project'
 Run the following command in your Laravel project root:
 
 ```bash
-composer require aumtics/prime-components:dev-main
+composer require aumtics/aumtics-components:dev-main
 ```
 
 ### 3. Publish Assets (Optional)
@@ -38,13 +38,13 @@ composer require aumtics/prime-components:dev-main
 If you want to customize the component views:
 
 ```bash
-php artisan vendor:publish --tag=prime-components-views
+php artisan vendor:publish --tag=aumtics-components-views
 ```
 
 If you want to customize the configuration:
 
 ```bash
-php artisan vendor:publish --tag=prime-components-config
+php artisan vendor:publish --tag=aumtics-components-config
 ```
 
 ### 4. Clear Cache
@@ -83,13 +83,13 @@ Route::get('/test-components', function () {
         <!-- Test Alert Component -->
         <div class="mb-6">
             <h2 class="text-xl font-semibold mb-4">Alert Component</h2>
-            <x-prime-alert message="This is a success alert!" type="success" />
+            <x-aumtics-alert message="This is a success alert!" type="success" />
         </div>
         
         <!-- Test Table Component -->
         <div class="mb-6">
             <h2 class="text-xl font-semibold mb-4">Table Component</h2>
-            <x-prime-table card-id="test-table">
+            <x-aumtics-table card-id="test-table">
                 <table class="min-w-full">
                     <thead>
                         <tr class="bg-gray-50">
@@ -115,20 +115,20 @@ Route::get('/test-components', function () {
                         </tr>
                     </tbody>
                 </table>
-            </x-prime-table>
+            </x-aumtics-table>
         </div>
         
         <!-- Test Dashboard Header Component -->
         <div class="mb-6">
             <h2 class="text-xl font-semibold mb-4">Dashboard Header Component</h2>
-            <x-prime-dashboard-header 
+            <x-aumtics-dashboard-header 
                 page-title="Test Dashboard" 
                 :breadcrumb-items="[
                     ['name' => 'Home', 'url' => '/'],
                     ['name' => 'Test', 'active' => true]
                 ]">
                 <button class="bg-blue-500 text-white px-4 py-2 rounded">Action Button</button>
-            </x-prime-dashboard-header>
+            </x-aumtics-dashboard-header>
         </div>
     </div>
 </body>
@@ -181,7 +181,7 @@ In your Laravel project's `composer.json`:
         }
     ],
     "require": {
-        "aumtics/prime-components": "dev-main"
+        "aumtics/aumtics-components": "dev-main"
     }
 }
 ```
@@ -196,7 +196,7 @@ composer install
 If you publish to Packagist, users can install with:
 
 ```bash
-composer require aumtics/prime-components
+composer require aumtics/aumtics-components
 ```
 
 ## Troubleshooting
@@ -232,7 +232,7 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
-    "./vendor/aumtics/prime-components/src/resources/views/**/*.blade.php",
+    "./vendor/aumtics/aumtics-components/src/resources/views/**/*.blade.php",
   ],
   theme: {
     extend: {},

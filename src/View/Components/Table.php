@@ -1,6 +1,6 @@
 <?php
 
-namespace Aumtics\PrimeComponents\View\Components;
+namespace Aumtics\AumticsComponents\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -20,6 +20,6 @@ class Table extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('prime-components::components.table');
+        return view('aumtics-components::components.table');
     }
 } 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Aumtics\PrimeComponents\View\Components;
+namespace Aumtics\AumticsComponents\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -25,6 +25,6 @@ class DashboardHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('prime-components::components.dashboard-header');
+        return view('aumtics-components::components.dashboard-header');
     }
 } 
